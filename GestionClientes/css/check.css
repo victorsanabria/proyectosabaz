@@ -1,0 +1,240 @@
+/* 
+    Document   : check
+    Created on : 12/06/2014, 06:47:40 PM
+    Author     : iccano
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.box {
+ -moz-border-radius: 15px; /* Firefox */
+ -webkit-border-radius: 15px; /* Safari and Chrome */
+ border-radius: 15px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+
+ -moz-box-shadow: 10px 10px 20px #000; /* Firefox */
+ -webkit-box-shadow: 10px 10px 20px #000; /* Safari and Chrome */
+ box-shadow: 10px 10px 20px #000; /* Opera 10.5+, future browsers and IE6+ using IE-CSS3 */
+
+ behavior: url(ie-css3.htc); /* Activamos el soporte para IE */
+}
+
+.radio, .checkbox, .radio-inline, .checkbox-inline {
+  position: relative;
+}
+.radio label, .checkbox label, .radio-inline label, .checkbox-inline label {
+  font-weight: normal;
+  cursor: pointer;
+  padding-left: 8px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.radio + .radio, .checkbox + .checkbox {
+  margin-top: 10px;
+}
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.checkbox i, .checkbox-inline i, .radio i, .radio-inline i {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 24px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.checkbox i.small, .checkbox-inline i.small, .radio i.small, .radio-inline i.small {
+  font-size: 18px;
+  top:2px;
+}
+.checkbox input[type=checkbox]:checked + i:before, .checkbox-inline input[type=checkbox]:checked + i:before {
+  content:"\f046";
+}
+.radio input[type=radio]:checked + i:before, .radio-inline input[type=radio]:checked + i:before {
+  content:"\f192";
+}
+.toggle-switch {
+  position: relative;
+  width: 60px;
+}
+.toggle-switch input {
+  display: none;
+}
+.toggle-switch label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.toggle-switch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+.toggle-switch-inner:before, .toggle-switch-inner:after {
+  float: left;
+  width: 50%;
+  height: 20px;
+  padding: 0;
+  line-height: 20px;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #FFFFFF;
+  color:#929292;
+  background-color: #F5F5F5;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+.toggle-switch-inner:before {
+  content: "SI";
+  padding-left: 15px;
+  -webkit-border-radius: 20px 0 0 20px;
+  -moz-border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
+}
+.toggle-switch-inner:after {
+  content: "NO";
+  padding-right: 15px;
+  text-align: right;
+  -webkit-border-radius: 0 20px 20px 0;
+  -moz-border-radius: 0 20px 20px 0;
+  border-radius: 0 20px 20px 0;
+}
+.toggle-switch-inner2 {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+.toggle-switch-inner2:before, .toggle-switch-inner2:after {
+  float: left;
+  width: 50%;
+  height: 20px;
+  padding: 0;
+  line-height: 20px;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #FFFFFF;
+  color:#929292;
+  background-color: #F5F5F5;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+.toggle-switch-inner2:before {
+  content: "   ";
+  padding-left: 15px;
+  -webkit-border-radius: 20px 0 0 20px;
+  -moz-border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
+}
+.toggle-switch-inner2:after {
+  content: "  ";
+  padding-right: 15px;
+  text-align: right;
+  -webkit-border-radius: 0 20px 20px 0;
+  -moz-border-radius: 0 20px 20px 0;
+  border-radius: 0 20px 20px 0;
+}
+.toggle-switch-switch {
+  width: 20px;
+  margin: 0;
+  border: 2px solid #d8d8d8;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  color: #f8f8f8;
+  line-height: 1em;
+  text-shadow: 0 0px 1px #ADADAD;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+  background-color: #f0f0f0;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background-image:    -moz-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background-image:     -ms-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background-image:      -o-linear-gradient(top, #f0f0f0, #dfdfdf);
+  background-image:         linear-gradient(to bottom, #f0f0f0, #dfdfdf);
+}
+.toggle-switch input:checked + .toggle-switch-inner {
+  margin-left: 0;
+}
+.toggle-switch input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  right: 0px; 
+}
+.toggle-switch-danger input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border:2px solid #D15E5E;
+  background: #D15E5E;
+}
+.toggle-switch-warning input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border:2px solid #DFD271;
+  background: #DFD271;
+}
+.toggle-switch-info input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border:2px solid #7BC5D3;
+  background: #7BC5D3;
+}
+.toggle-switch-success input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border:2px solid #63CC9E;
+  background: #63CC9E;
+}
+.toggle-switch-primary input:checked + .toggle-switch-inner + .toggle-switch-switch {
+  border:2px solid #6AA6D6;
+  background: #6AA6D6;
+}
+.toggle-switch input:checked + .toggle-switch-inner2 {
+  margin-left: 0;
+}
+.toggle-switch input:checked + .toggle-switch-inner2 + .toggle-switch-switch {
+  right: 0px; 
+}
+.toggle-switch-danger input:checked + .toggle-switch-inner2 + .toggle-switch-switch {
+  border:2px solid #D15E5E;
+  background: #D15E5E;
+}
+.toggle-switch-warning input:checked + .toggle-switch-inner2 + .toggle-switch-switch {
+  border:2px solid #DFD271;
+  background: #DFD271;
+}
+.toggle-switch-info input:checked + .toggle-switch-inner2 + .toggle-switch-switch {
+  border:2px solid #7BC5D3;
+  background: #7BC5D3;
+}
+.toggle-switch-success input:checked + .toggle-switch-inner2 + .toggle-switch-switch {
+  border:2px solid #63CC9E;
+  background: #63CC9E;
+}
+.toggle-switch-primary input:checked + .toggle-switch-inner2 + .toggle-switch-switch {
+  border:2px solid #6AA6D6;
+  background: #6AA6D6;
+}
